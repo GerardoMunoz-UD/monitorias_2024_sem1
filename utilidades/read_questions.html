@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Visor de contenido H5P</title>
+</head>
+<body>
+    <h1>Cargador y visor de contenido H5P</h1>
+    <input type="file" id="fileInput" accept=".h5p">
+    <button onclick="loadH5P()">Cargar y Analizar</button>
+    <button id="downloadBtn" onclick="downloadContent()" style="display: none;">Descargar HTML</button>
+    <div id="contentDisplay"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.9.1/jszip.min.js"></script>
+    <script>
+        let globalQuestions = [];
+
+        async function loadH5P() {
+            const fileInput = document.getElementById('fileInput');
+            const contentDisplay = document.getElementById('contentDisplay');
+            if (fileInput.files.length === 0) {
+                alert('Por favor, selecciona un archivo .h5p');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const zip = await JSZip.loadAsync(file);
+            const contentJson = await zip.file("content/content.json").async("string");
+            const content = JSON.parse(contentJson);
+
+            globalQuestions = [];
+            findQuestions(content, globalQuestions);
+            displayQuestions(globalQuestions);
+            document.getElementById('downloadBtn').style.display = 'inline'; // Mostrar el botón de descarga
+        }
+
+        function findQuestions(node, questions) {
+            if (node.hasOwnProperty('question') && node.hasOwnProperty('answers')) {
+                questions.push(node);
+            }
+            for (let key in node) {
+                if (node[key] !== null && typeof node[key] === 'object') {
+                    findQuestions(node[key], questions);
+                }
+            }
+        }
+
+        function displayQuestions(questions) {
+            const contentDisplay = document.getElementById('contentDisplay');
+            contentDisplay.innerHTML = ''; // Limpiar contenido anterior
+            questions.forEach((question, index) => {
+                const questionDiv = document.createElement('div');
+                const questionText = document.createElement('p');
+                questionText.textContent = `Pregunta: ${question.question}`;
+                questionDiv.appendChild(questionText);
+
+                const answersList = document.createElement('ul');
+                question.answers.forEach((answer, answerIndex) => {
+                    const answerItem = document.createElement('li');
+                    const label = document.createElement('label');
+                    const input = document.createElement('input');
+                    input.type = 'radio';
+                    input.name = `question${index}`;
+                    input.value = answer.correct;
+                    label.appendChild(input);
+                    label.innerHTML += answer.text;
+                    answerItem.appendChild(label);
+                    answersList.appendChild(answerItem);
+                });
+
+                questionDiv.appendChild(answersList);
+                contentDisplay.appendChild(questionDiv);
+            });
+        }
+
+        function downloadContent() {
+            let htmlContent = "<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body>";
+            htmlContent += "<h1>Preguntas y Respuestas</h1>";
+            globalQuestions.forEach((question, index) => {
+                htmlContent += `<div><p>Pregunta: ${question.question}</p><ul>`;
+                question.answers.forEach((answer, answerIndex) => {
+                    htmlContent += `<li><label><input type='radio' name='question${index}' value='${answer.correct}'>${answer.text}</label></li>`;
+                });
+                htmlContent += `</ul></div>`;
+            });
+            htmlContent += `<button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p>`;
+            htmlContent += `<script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de ${globalQuestions.length}'; }<\/script>`;
+            htmlContent += "</body></html>";
+
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'preguntas.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
