@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>El promedio de una lista de números se calcula sumando todos los elementos y dividiendo la suma por la cantidad de elementos.</p>
+
+<p>&lt;code class="language-python"&gt;</p>
+
+<p>def calcular_promedio(lista):<br>
+&nbsp; &nbsp; suma = 0<br>
+&nbsp; &nbsp;&nbsp;<br>
+&nbsp; &nbsp; for numero in lista:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; ___<br>
+&nbsp; &nbsp;&nbsp;<br>
+&nbsp; &nbsp; promedio = suma / len(lista)<br>
+&nbsp; &nbsp; return promedio<br>
+&nbsp;</p>
+
+<p>&lt;/code&gt;</p>
+
+<p>Seleccione la opción que corresponde a los guiones&nbsp;</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>numero = suma</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>suma = numero</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>suma += numero</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>promedio += numero</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 1'; }</script></body></html>
