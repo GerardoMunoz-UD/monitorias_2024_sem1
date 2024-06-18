@@ -1,0 +1,5 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Para que se utiliza el iman?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>Para transportar los electrones del catodo al anodo</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Para deformar el haz de electrones dependiendo de la polaridad</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Para aumentar la iluminancia del tubo fluorescente</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 1'; }</script></body></html>
