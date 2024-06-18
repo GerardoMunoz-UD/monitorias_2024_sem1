@@ -1,20 +1,120 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1>
-  <img src ="ImagenCuestionario1png" alt="Imagen señal de transmisión de televisión" width="500" height="300"> 
-
-<div><p>Pregunta: <p>Teniendo en cuenta que el black level(nivel de negro de la escena) es de 0.07Vpp, ¿A cuántos IRE correspondería dicho nivel si la escala de IRE no está bien ajustada?</p>
-
-</p><ul><li><label><input type='radio' name='question0' value='false'><div>7 IRE</div>
-</label></li><li><label><input type='radio' name='question0' value='true'><div>10 IRE</div>
-</label></li><li><label><input type='radio' name='question0' value='false'><div>14 IRE</div>
-</label></li></ul></div><div><p>Pregunta: <p>Resolver,¿Cuanto voltaje corresponderia 50 IRE?</p>
-</p><ul><li><label><input type='radio' name='question1' value='false'><div>0.5 V</div>
-</label></li><li><label><input type='radio' name='question1' value='false'><div>0.3 V</div>
-</label></li><li><label><input type='radio' name='question1' value='false'><div>0.25 V</div>
-</label></li><li><label><input type='radio' name='question1' value='true'><div>0.35 V</div>
-</label></li></ul></div><div><p>Pregunta: <p>¿Que es y para que sirve la escala IRE?</p>
-</p><ul><li><label><input type='radio' name='question2' value='true'><div>La escala IRE se utiliza para medir la amplitud de las señales de video en sistemas de televisión analógica, con 0 IRE representando el blanking y 100 IRE representando el blanco máximo.</div>
-</label></li><li><label><input type='radio' name='question2' value='false'><div>La escala IRE es un estándar utilizado en la codificación de señales de televisión para ajustar la profundidad de color y la resolución de imagen en tiempo real.</div>
-</label></li></ul></div><div><p>Pregunta: <p>¿Para qué sirve el burst?</p>
-</p><ul><li><label><input type='radio' name='question3' value='false'><div>El burst es una técnica utilizada en el procesamiento de señales de video para mejorar la claridad de la imagen en las transmisiones, mediante la amplificación selectiva de ciertas frecuencias.</div>
-</label></li><li><label><input type='radio' name='question3' value='true'><div>El burst es una parte de la señal de color en el estándar de televisión NTSC que se utiliza para sincronizar la fase de la subportadora de color en el receptor de televisión, garantizando una reproducción precisa del color.</div>
-</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 4'; }</script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Preguntas Exportadas</title>
+</head>
+<body>
+    <h1>Preguntas y Respuestas</h1>
+    <img src="ImagenCuestionario1.png" alt="Imagen señal de transmisión de televisión" width="500" height="300">
+    
+    <div>
+        <p>Pregunta:</p>
+        <p>Teniendo en cuenta que el black level (nivel de negro de la escena) es de 0.07Vpp, ¿A cuántos IRE correspondería dicho nivel si la escala de IRE no está bien ajustada?</p>
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="question0" value="false">
+                    <div>7 IRE</div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question0" value="true">
+                    <div>10 IRE</div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question0" value="false">
+                    <div>14 IRE</div>
+                </label>
+            </li>
+        </ul>
+    </div>
+    
+    <div>
+        <p>Pregunta:</p>
+        <p>Resolver, ¿Cuánto voltaje correspondería a 50 IRE?</p>
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="question1" value="false">
+                    <div>0.5 V</div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question1" value="false">
+                    <div>0.3 V</div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question1" value="false">
+                    <div>0.25 V</div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question1" value="true">
+                    <div>0.35 V</div>
+                </label>
+            </li>
+        </ul>
+    </div>
+    
+    <div>
+        <p>Pregunta:</p>
+        <p>¿Qué es y para qué sirve la escala IRE?</p>
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="question2" value="true">
+                    <div>La escala IRE se utiliza para medir la amplitud de las señales de video en sistemas de televisión analógica, con 0 IRE representando el blanking y 100 IRE representando el blanco máximo.</div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question2" value="false">
+                    <div>La escala IRE es un estándar utilizado en la codificación de señales de televisión para ajustar la profundidad de color y la resolución de imagen en tiempo real.</div>
+                </label>
+            </li>
+        </ul>
+    </div>
+    
+    <div>
+        <p>Pregunta:</p>
+        <p>¿Para qué sirve el burst?</p>
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="question3" value="false">
+                    <div>El burst es una técnica utilizada en el procesamiento de señales de video para mejorar la claridad de la imagen en las transmisiones, mediante la amplificación selectiva de ciertas frecuencias.</div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question3" value="true">
+                    <div>El burst es una parte de la señal de color en el estándar de televisión NTSC que se utiliza para sincronizar la fase de la subportadora de color en el receptor de televisión, garantizando una reproducción precisa del color.</div>
+                </label>
+            </li>
+        </ul>
+    </div>
+    
+    <button onclick="checkAnswers()">Verificar Respuestas</button>
+    <p id="result"></p>
+    
+    <script>
+        function checkAnswers() {
+            var correctCount = 0;
+            document.querySelectorAll('input[type="radio"]').forEach(input => {
+                if (input.checked && input.value === 'true') {
+                    correctCount++;
+                }
+            });
+            document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 4';
+        }
+    </script>
+</body>
+</html>
