@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>Un objeto en caída libre se mueve hacia abajo con una aceleración de 9.8 m/s² debido a la gravedad. ¿Cuál será su velocidad después de 2 segundos?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>9.8 m/s hacia abajo</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>19.6 m/s hacia abajo</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>20 m/s hacia abajo</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>39.2 m/s hacia abajo</div>
+</label></li></ul></div><div><p>Pregunta: <p>Si una fuerza de 100 N se aplica a un objeto de 20 kg, ¿cuál será su aceleración?</p>
+</p><ul><li><label><input type='radio' name='question1' value='true'><div>5 m/s²</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>10 m/s²</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>15 m/s²</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>20 m/s²</div>
+</label></li></ul></div><div><p>Pregunta: <p>Un coche viaja a una velocidad constante de 80 km/h durante 2 horas. ¿Cuál es la distancia total que recorre?</p>
+</p><ul><li><label><input type='radio' name='question2' value='false'><div>80 km</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>160 km</div>
+</label></li><li><label><input type='radio' name='question2' value='true'><div>240 km</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>320 km</div>
+</label></li></ul></div><div><p>Pregunta: <p>Si un objeto de 10 kg se encuentra en reposo y se le aplica una fuerza de 50 N hacia adelante, ¿cuál será su aceleración?</p>
+</p><ul><li><label><input type='radio' name='question3' value='false'><div>50 m/s² hacia adelante</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>500 m/s² hacia adelante</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>0.2 m/s² hacia adelante</div>
+</label></li><li><label><input type='radio' name='question3' value='true'><div>5 m/s² hacia adelante</div>
+</label></li></ul></div><div><p>Pregunta: <p>Si un nadador empuja el agua hacia atrás con una fuerza de 50 N, ¿con qué fuerza empuja el agua al nadador hacia adelante?</p>
+</p><ul><li><label><input type='radio' name='question4' value='false'><div>25N</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>30N</div>
+</label></li><li><label><input type='radio' name='question4' value='true'><div>50N</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>55N</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 5'; }</script></body></html>
