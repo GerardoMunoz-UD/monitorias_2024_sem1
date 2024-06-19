@@ -35,7 +35,7 @@
         }
 
         function findQuestions(node, questions) {
-            if (node.hasOwnProperty('question') && node.hasOwnProperty('answers')) {
+            if (node.hasOwnProperty('question') ) {
                 questions.push(node);
             }
             for (let key in node) {
@@ -55,18 +55,46 @@
                 questionDiv.appendChild(questionText);
 
                 const answersList = document.createElement('ul');
-                question.answers.forEach((answer, answerIndex) => {
-                    const answerItem = document.createElement('li');
-                    const label = document.createElement('label');
-                    const input = document.createElement('input');
-                    input.type = 'radio';
-                    input.name = `question${index}`;
-                    input.value = answer.correct;
-                    label.appendChild(input);
-                    label.innerHTML += answer.text;
-                    answerItem.appendChild(label);
-                    answersList.appendChild(answerItem);
-                });
+				if ("answers" in question){
+					question.answers.forEach((answer, answerIndex) => {
+						const answerItem = document.createElement('li');
+						const label = document.createElement('label');
+						const input = document.createElement('input');
+						input.type = 'radio';
+						input.name = `question${index}`;
+						//console.log(input.name)
+						input.value = answer.correct;
+						label.appendChild(input);
+						label.innerHTML += answer.text;
+						answerItem.appendChild(label);
+						answersList.appendChild(answerItem);
+					});
+				}
+				if ("correct" in question){
+						{const answerItem = document.createElement('li');
+						const label = document.createElement('label');
+						const input = document.createElement('input');
+						input.type = 'radio';
+						input.name = `question${index}`;
+						input.value = question.correct;
+						label.appendChild(input);
+						label.innerHTML += 'True';
+						answerItem.appendChild(label);
+						answersList.appendChild(answerItem);
+						}
+						{
+						const answerItem = document.createElement('li');
+						const label = document.createElement('label');
+						const input = document.createElement('input');
+						input.type = 'radio';
+						input.name = `question${index}`;
+						input.value = !question.correct;
+						label.appendChild(input);
+						label.innerHTML += 'False';
+						answerItem.appendChild(label);
+						answersList.appendChild(answerItem);
+						}
+				}
 
                 questionDiv.appendChild(answersList);
                 contentDisplay.appendChild(questionDiv);
@@ -78,9 +106,21 @@
             htmlContent += "<h1>Preguntas y Respuestas</h1>";
             globalQuestions.forEach((question, index) => {
                 htmlContent += `<div><p>Pregunta: ${question.question}</p><ul>`;
-                question.answers.forEach((answer, answerIndex) => {
-                    htmlContent += `<li><label><input type='radio' name='question${index}' value='${answer.correct}'>${answer.text}</label></li>`;
-                });
+				if ("answers" in question){
+					question.answers.forEach((answer, answerIndex) => {
+						htmlContent += `<li><label><input type='radio' name='question${index}' value='${answer.correct}'>${answer.text}</label></li>`;
+					});
+				}	
+				if ("correct" in question){
+					const vf = (question.correct === "true");
+					{
+						htmlContent += `<li><label><input type='radio' name='question${index}' value='${vf}'>${"Verdadero"}</label></li>`;
+					}
+					{
+						htmlContent += `<li><label><input type='radio' name='question${index}' value='${!vf}'>${"Falso"}</label></li>`;
+						
+					}
+				}	
                 htmlContent += `</ul></div>`;
             });
             htmlContent += `<button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p>`;
