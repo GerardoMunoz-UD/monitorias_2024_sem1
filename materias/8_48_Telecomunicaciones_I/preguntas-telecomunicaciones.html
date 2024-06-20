@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Qué tipo de modulación se utiliza comúnmente en las comunicaciones de voz analógicas a través de redes telefónicas?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>Modulación de frecuencia (FM)</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>Modulación de amplitud (AM)</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Modulación de fase (PM)</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué significa la sigla "DSL" en el contexto de las telecomunicaciones?</p>
+</p><ul><li><label><input type='radio' name='question1' value='true'><div>Digital Subscriber Line</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Direct Signal Link</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Data Switching Language</div>
+</label></li></ul></div><div><p>Pregunta: <p>En el contexto de las redes móviles, ¿qué significa la sigla "LTE"?</p>
+</p><ul><li><label><input type='radio' name='question2' value='true'><div>Long-Term Evolution</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Low-Transmission Efficiency</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Localized Telecommunication Equipment</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es la función principal de un router en una red de telecomunicaciones?</p>
+</p><ul><li><label><input type='radio' name='question3' value='false'><div>Amplificar la señal</div>
+</label></li><li><label><input type='radio' name='question3' value='true'><div>Enrutamiento de paquetes</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Convertir señales analógicas en digitales</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué tipo de tecnología inalámbrica se utiliza en la mayoría de las redes Wi-Fi para la transmisión de datos?</p>
+</p><ul><li><label><input type='radio' name='question4' value='false'><div>Infrarrojo (IR)</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Bluetooth</div>
+</label></li><li><label><input type='radio' name='question4' value='true'><div>Radiofrecuencia (RF)</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es el propósito principal de un protocolo de comunicación en telecomunicaciones?</p>
+</p><ul><li><label><input type='radio' name='question5' value='false'><div>Encriptar datos</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>Establecer una conexión segura</div>
+</label></li><li><label><input type='radio' name='question5' value='true'><div>Estandarizar el formato y la secuencia de los datos transmitidos</div>
+</label></li></ul></div><div><p>Pregunta: <p>En el contexto de las redes de telefonía móvil, ¿cuál es la generación más reciente de tecnología de comunicaciones móviles?</p>
+</p><ul><li><label><input type='radio' name='question6' value='false'><div>3G</div>
+</label></li><li><label><input type='radio' name='question6' value='false'><div>4G</div>
+</label></li><li><label><input type='radio' name='question6' value='true'><div>5G</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 7'; }</script></body></html>

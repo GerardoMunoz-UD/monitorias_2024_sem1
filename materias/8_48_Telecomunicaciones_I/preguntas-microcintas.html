@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Cuál es la función principal de una línea de transmisión de microcintas en un circuito impreso?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>Proporcionar aislamiento eléctrico</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Conducir la corriente de manera eficiente</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>Guiar las señales de alta frecuencia</div>
+</label></li></ul></div><div><p>Pregunta: <p>Si se tiene una línea de microcintas de longitud L y constante dieléctrica εr, ¿cuál es la velocidad de fase (vf) en la línea?</p>
+</p><ul><li><label><input type='radio' name='question1' value='true'><div>vf = c / √εr, donde c es la velocidad de la luz en el vacío</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>vf = L / εr</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>vf = c / εr, donde c es la velocidad de la luz en el vacío</div>
+</label></li></ul></div><div><p>Pregunta: <p>Para una línea de microcintas, ¿cómo afecta el aumento del ancho de la pista (W) al valor de la impedancia característica (Z0)?</p>
+</p><ul><li><label><input type='radio' name='question2' value='true'><div>Aumenta Z0</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Disminuye Z0</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>No tiene efecto en Z0</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es la fórmula general para calcular la impedancia característica (Z0) de una línea de microcintas?</p>
+</p><ul><li><label><input type='radio' name='question3' value='false'><div>Z0 = (60 / √εr) * ln(2h/W), donde εr es la constante dieléctrica y h es el espesor de la capa dieléctrica</div>
+</label></li><li><label><input type='radio' name='question3' value='true'><div>Z0 = (L / Wεr) * ln(2h/W), donde L es la longitud, W es el ancho, εr es la constante dieléctrica y h es el espesor de la capa dieléctrica</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Z0 = (90 / √εr) * ln(2h/W), donde εr es la constante dieléctrica y h es el espesor de la capa dieléctrica</div>
+</label></li></ul></div><div><p>Pregunta: <p>En una línea de microcintas, ¿qué sucede con la impedancia característica (Z0) si se incrementa el espesor de la capa dieléctrica (h)?</p>
+</p><ul><li><label><input type='radio' name='question4' value='false'><div>Aumenta Z0</div>
+</label></li><li><label><input type='radio' name='question4' value='true'><div>Disminuye Z0</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>No tiene efecto en Z0</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 5'; }</script></body></html>
