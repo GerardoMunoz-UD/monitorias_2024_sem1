@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>En un sistema de comunicaciones digitales, si se transmite una secuencia binaria con una tasa de 1000 bps (bits por segundo) utilizando una modulación BPSK (Binary Phase Shift Keying) con una frecuencia de portadora de 1 MHz, ¿cuál es el ancho de banda necesario para transmitir esta señal?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>0.5 MHz</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>1 MHz</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>2 MHz</div>
+</label></li></ul></div><div><p>Pregunta: <p>Si tienes una señal digital transmitida utilizando modulación QAM-64 (Quadrature Amplitude Modulation), ¿cuántos bits se transmiten por símbolo?</p>
+</p><ul><li><label><input type='radio' name='question1' value='false'><div>4 bits</div>
+</label></li><li><label><input type='radio' name='question1' value='true'><div>6 bits</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>8 bits</div>
+</label></li></ul></div><div><p>Pregunta: <p>En un sistema de comunicaciones digitales, si se utiliza una codificación Manchester para transmitir datos a 10 Mbps (megabits por segundo), ¿cuál es la tasa de modulación?</p>
+</p><ul><li><label><input type='radio' name='question2' value='false'><div>5 Mbps</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>10 Mbps</div>
+</label></li><li><label><input type='radio' name='question2' value='true'><div>20 Mbps</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es la principal ventaja de la modulación por desplazamiento de fase (PSK) sobre la modulación por desplazamiento de amplitud (ASK) en sistemas de comunicaciones digitales?</p>
+</p><ul><li><label><input type='radio' name='question3' value='true'><div>Mayor eficiencia espectral</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Mayor inmunidad al ruido</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Mayor simplicidad de implementación</div>
+</label></li></ul></div><div><p>Pregunta: <p>En un sistema de comunicaciones digitales, ¿qué parámetro se utiliza para medir la relación señal a ruido (SNR) en un canal de transmisión?</p>
+</p><ul><li><label><input type='radio' name='question4' value='true'><div>BER (Bit Error Rate)</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>QAM (Quadrature Amplitude Modulation)</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>FSK (Frequency Shift Keying)</div>
+</label></li></ul></div><div><p>Pregunta: <p>En un sistema de comunicaciones digitales, ¿cuál es el propósito de la corrección de errores en el receptor?</p>
+</p><ul><li><label><input type='radio' name='question5' value='false'><div>Aumentar la tasa de transmisión</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>Minimizar la latencia de la transmisión</div>
+</label></li><li><label><input type='radio' name='question5' value='true'><div>Recuperar información correcta de los errores de transmisión</div>
+</label></li></ul></div><div><p>Pregunta: <p>Si se transmite una señal digital utilizando una modulación QPSK (Quadrature Phase Shift Keying) y se observa un desplazamiento de fase de 45 grados en la señal recibida en comparación con la señal transmitida, ¿cuántos símbolos se han transmitido en el intervalo de tiempo observado?</p>
+</p><ul><li><label><input type='radio' name='question6' value='false'><div>2 símbolos</div>
+</label></li><li><label><input type='radio' name='question6' value='true'><div>4 símbolos</div>
+</label></li><li><label><input type='radio' name='question6' value='false'><div>8 símbolos</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 7'; }</script></body></html>
