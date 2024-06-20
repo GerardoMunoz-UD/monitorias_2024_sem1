@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>En un sistema de comunicaciones analógicas, ¿qué parámetro mide la relación entre la potencia de la señal de la portadora y la potencia de las bandas laterales en una señal modulada en amplitud (AM)?</p>
+</p><ul><li><label><input type='radio' name='question0' value='true'><div>Índice de modulación</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Ancho de banda de la señal modulada</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Relación señal a ruido (SNR)</div>
+</label></li></ul></div><div><p>Pregunta: <p>Si una señal modulada en frecuencia (FM) tiene una desviación de frecuencia de 25 kHz y una frecuencia portadora de 100 MHz, ¿cuál es la frecuencia más alta alcanzada en la señal modulada?</p>
+</p><ul><li><label><input type='radio' name='question1' value='false'><div>100.025 MHz</div>
+</label></li><li><label><input type='radio' name='question1' value='true'><div>100.050 MHz</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>100.075 MHz</div>
+</label></li></ul></div><div><p>Pregunta: <p>En una señal modulada en fase (PM), ¿qué parámetro se utiliza para medir la cantidad de variación en la fase de la portadora debido a la modulación?</p>
+</p><ul><li><label><input type='radio' name='question2' value='true'><div>Índice de modulación de fase</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Desviación de fase</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Ancho de banda de la señal modulada</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es la ecuación que describe la relación entre la frecuencia instantánea y la fase en una señal modulada en frecuencia (FM)?</p>
+</p><ul><li><label><input type='radio' name='question3' value='false'><div>f(t) = A * sin(2πf_ct + kf(t))</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>φ(t) = A * cos(2πf_ct + kf(t))</div>
+</label></li><li><label><input type='radio' name='question3' value='true'><div>f(t) = A * cos(2πf_ct + kf(t))</div>
+</label></li></ul></div><div><p>Pregunta: <p>En una señal modulada en amplitud (AM), si la señal modulante tiene una frecuencia de 2 kHz y una amplitud de 1 V, ¿cuál será la amplitud de la señal modulada cuando la portadora está al máximo de modulación (100%)?</p>
+</p><ul><li><label><input type='radio' name='question4' value='false'><div>0 V</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>2 V</div>
+</label></li><li><label><input type='radio' name='question4' value='true'><div>3 V</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es el propósito principal de la detección de envolvente en la recepción de señales AM?</p>
+</p><ul><li><label><input type='radio' name='question5' value='false'><div>Extraer la señal portadora</div>
+</label></li><li><label><input type='radio' name='question5' value='true'><div>Extraer la señal modulante</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>Minimizar la distorsión en la señal recibida</div>
+</label></li></ul></div><div><p>Pregunta: <p>Minimizar la distorsión en la señal recibida</p>
+</p><ul><li><label><input type='radio' name='question6' value='true'><div>Las aumenta</div>
+</label></li><li><label><input type='radio' name='question6' value='false'><div>Las disminuye</div>
+</label></li><li><label><input type='radio' name='question6' value='false'><div>No tiene efecto en la amplitud de las bandas laterales</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 7'; }</script></body></html>
