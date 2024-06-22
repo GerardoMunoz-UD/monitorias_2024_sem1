@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Cuál de las siguientes tecnologías NO es un lenguaje de marcado utilizado en la programación web?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>HTML</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>CSS</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>JavaScript</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>SQL</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué significa la sigla "HTTP" en el contexto de la programación web?</p>
+</p><ul><li><label><input type='radio' name='question1' value='false'><div>HyperText Markup Protocol</div>
+</label></li><li><label><input type='radio' name='question1' value='true'><div>HyperText Transfer Protocol</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>HyperText Transmission Protocol</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>HyperText Textual Protocol</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué es el modelo de caja en CSS?</p>
+</p><ul><li><label><input type='radio' name='question2' value='false'><div>Un modelo de programación de software para la creación de interfaces de usuario</div>
+</label></li><li><label><input type='radio' name='question2' value='true'><div>Un modelo que define la forma en que se distribuyen los elementos en una página web</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Un modelo que define la estructura de una base de datos</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Un modelo que define la forma en que se transmiten los datos en una red</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué es un servidor web?</p>
+</p><ul><li><label><input type='radio' name='question3' value='false'><div>Un programa que se ejecuta en el lado del cliente</div>
+</label></li><li><label><input type='radio' name='question3' value='true'><div>Un programa que se ejecuta en el lado del servidor</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Un programa que se ejecuta en el lado del servidor</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Un programa que se ejecuta en la nube</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué significa CRUD?</p>
+</p><ul><li><label><input type='radio' name='question4' value='true'><div>Create, Read, Update, Delete</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Connect, Retrieve, Update, Delete</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Create, Retrieve, Update, Deploy</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Connect, Retrieve, Use, Delete</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 5'; }</script></body></html>

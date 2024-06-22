@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Cómo podemos comprobar si una palabra es palíndromo?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>Reemplazando los caracteres especiales</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>Invirtiendo la palabra y comparándola con la original</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Contando los caracteres de la palabra</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo podemos invertir una palabra en JavaScript?</p>
+</p><ul><li><label><input type='radio' name='question1' value='false'><div>Utilizando el método "reverse()"</div>
+</label></li><li><label><input type='radio' name='question1' value='true'><div>Utilizando el método "split()"</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Utilizando el método "join()"</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo podemos comparar la palabra original con la palabra invertida?</p>
+</p><ul><li><label><input type='radio' name='question2' value='true'><div>Utilizando el operador "=="</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Utilizando el método "equals()"</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Utilizando el operador "==="</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Utilizando un ciclo "for"</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 3'; }</script></body></html>

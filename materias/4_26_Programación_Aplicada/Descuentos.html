@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿qué tipo de variable necesitas para guardar el precio original del producto ?&nbsp;&nbsp;</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>boolean</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>string</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>integer</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>float</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo puedes obtener el precio original del producto a partir de la entrada de usuario ?&nbsp;</p>
+</p><ul><li><label><input type='radio' name='question1' value='true'><div>Usando la función input() y convirtiendo la entrada a float.&nbsp;</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Usando la función print() y convirtiendo la entrada a float&nbsp;</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Usando la función input() y convirtiendo la entrada a int</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Usando la función read() y convirtiendo la entrada a float&nbsp;</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo se calcula el precio final del producto después de aplicar el descuento ?&nbsp;</p>
+</p><ul><li><label><input type='radio' name='question2' value='false'><div>precio_final = precio_original * porcentaje_descuento</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>precio_final = precio_original - porcentaje_descuento</div>
+</label></li><li><label><input type='radio' name='question2' value='true'><div>precio_final = precio_original * (1 - porcentaje_descuento/100))</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>precio_final = precio_original + porcentaje_descuento/100</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué tipo de variable necesitas para guardar el porcentaje de descuento a aplicar ?</p>
+</p><ul><li><label><input type='radio' name='question3' value='false'><div>boolean</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>string</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>integer</div>
+</label></li><li><label><input type='radio' name='question3' value='true'><div>float</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo puedes mostrar el precio final al usuario ?&nbsp;</p>
+</p><ul><li><label><input type='radio' name='question4' value='false'><div>Usando la función input() y convirtiendo el precio final a string.&nbsp;</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Usando la función print() y convirtiendo el precio final a string</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Usando la función input() y convirtiendo el precio final a integer&nbsp;</div>
+</label></li><li><label><input type='radio' name='question4' value='true'><div>Usando la función print() pasando la variable directamente sin convertirla en otro tipo &nbsp;</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 5'; }</script></body></html>
