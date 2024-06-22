@@ -1,0 +1,6 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Qué es la encapsulación en programación orientada a objetos?</p>
+</p><ul><li><label><input type='radio' name='question0' value='true'><div>Un proceso de ocultar los detalles internos de un objeto.</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Un proceso de crear objetos a partir de clases.&nbsp;</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Un proceso de herencia entre clases.</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Un proceso de destruir objetos después de su uso</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 1'; }</script></body></html>

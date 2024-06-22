@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Cuáles son los atributos que debe tener la clase Libro ?&nbsp;</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>Título, autor y precio</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>Título, autor y número de ejemplares disponibles&nbsp;</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Título, número de páginas y editorial .&nbsp;</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué métodos debe tener la clase Libro ?&nbsp;</p>
+</p><ul><li><label><input type='radio' name='question1' value='false'><div>Prestar y devolver el libro</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Consultar el catálogo , prestar y devolver el libro.&nbsp;</div>
+</label></li><li><label><input type='radio' name='question1' value='true'><div>Prestar y devolver el libro, y consultar el número de ejemplares disponibles&nbsp;</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es el atributo de la clase Biblioteca?&nbsp;</p>
+</p><ul><li><label><input type='radio' name='question2' value='false'><div>Lista de libros</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Lista de autores&nbsp;</div>
+</label></li><li><label><input type='radio' name='question2' value='true'><div>Lista de precios</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué metodos debe tener la clase Biblioteca?</p>
+</p><ul><li><label><input type='radio' name='question3' value='false'><div>Prestar y devolver libros&nbsp;</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Consultar el catálogo y prestar y devolver libros&nbsp;</div>
+</label></li><li><label><input type='radio' name='question3' value='true'><div>Consultar el catálogo , prestar y devolver libros&nbsp;</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo se presta un libro en el programa?&nbsp;</p>
+</p><ul><li><label><input type='radio' name='question4' value='true'><div>Se llama al método prestar() de la clase Biblioteca, pasando como argumento el objeto Libro que se quiere prestar</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Se llama al método prestar() de la clase Libro, pasando como argumento el objeto Biblioteca</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Se llama al método prestar() de la clase Libro, sin argumentos</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo se devuelve un libro en el programa ?&nbsp;</p>
+</p><ul><li><label><input type='radio' name='question5' value='true'><div>Se llama al método devolver() de la clase Biblioteca, pasando como argumento el objeto Libro que se quiere devolver&nbsp;</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>Se llama al método devolver() de la clase Libro , pasando como argumento el objeto Biblioteca&nbsp;</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>Se llama al método devolver() de la clase Libro, sin argumentos.&nbsp;</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 6'; }</script></body></html>

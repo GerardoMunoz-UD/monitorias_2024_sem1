@@ -1,0 +1,6 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Qué es la herencia en programación orientada a objetos?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>La capacidad de un objeto de tomar diferentes formas.</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>La creación de una nueva clase a partir de una clase existente.&nbsp;</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>El proceso de ocultar detalles internos de un objeto.</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>La agrupación de objetos relacionados en una misma clase.</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 1'; }</script></body></html>
