@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>&nbsp;</p>
+
+<p>¿Qué es un número par?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>Un número que termina en 1.</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div><br>
+Un número que termina en 2, 4, 6, 8 o 0.</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Un número que no puede dividirse exactamente entre 2.</div>
+</label></li><li><label><input type='radio' name='question0' value='false'>undefined</label></li></ul></div><div><p>Pregunta: 
+	
+	<p>¿Qué tipo de bucle es más adecuado para recorrer los números del 1 al 100?</p>
+	
+
+</p><ul><li><label><input type='radio' name='question1' value='false'><div>Bucle '<code>while'</code>.</div>
+</label></li><li><label><input type='radio' name='question1' value='true'><div>Bucle '<code>for'</code>.</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Ambos son igualmente adecuados.</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Para qué podemos utilizar una variable en este ejercicio?</p>
+</p><ul><li><label><input type='radio' name='question2' value='false'><div>Para almacenar el valor de la suma total de los números impares.</div>
+</label></li><li><label><input type='radio' name='question2' value='true'><div>Para almacenar el valor de la suma total de los números pares</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Para almacenar el valor de los números impares.</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál de los siguientes operadores aritméticos podemos utilizar para comprobar si un número es par?</p>
+</p><ul><li><label><input type='radio' name='question3' value='false'><div>+</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>-</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>*</div>
+</label></li><li><label><input type='radio' name='question3' value='true'><div>%</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo podemos crear una condición que compruebe si un número es par?</p>
+</p><ul><li><label><input type='radio' name='question4' value='false'><div>Utilizando el operador lógico <code>AND</code> para comprobar si el número es divisible entre 2 y no tiene decimales.</div>
+</label></li><li><label><input type='radio' name='question4' value='true'><div>Utilizando el operador aritmético <code>%</code> para comprobar si el resto de la división del número entre 2 es igual a 0.</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Utilizando el operador lógico <code>OR</code> para comprobar si el número es divisible entre 2 o no tiene decimales.</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo podemos imprimir el resultado final de la suma de los números pares?</p>
+</p><ul><li><label><input type='radio' name='question5' value='true'><div>Utilizando la función <code>print()</code> y mostrando el valor de la variable <code>suma</code>.</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>Utilizando la función <code>input()</code> y pidiendo al usuario que introduzca el valor de la variable <code>suma</code>.</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>Utilizando la función <code>len()</code> y mostrando la longitud de la variable <code>suma</code>.</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 6'; }</script></body></html>

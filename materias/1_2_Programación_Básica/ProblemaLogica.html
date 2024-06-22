@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Qué información solicita el programa al usuario para calcular el precio total de la cena?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>El número de comensales y el valor de la comida.</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>El valor de la comida, el porcentaje de recargo por cubiertos y el porcentaje de propina.</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>El valor de la comida y el número de cubiertos.</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo se calcula el valor del recargo por cubiertos?</p>
+</p><ul><li><label><input type='radio' name='question1' value='false'><div>Se suma el valor de la comida y el porcentaje de recargo.</div>
+</label></li><li><label><input type='radio' name='question1' value='true'><div>Se multiplica el valor de la comida por el porcentaje de recargo.</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Se divide el valor de la comida por el porcentaje de recargo.</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo se calcula el valor de la propina?</p>
+</p><ul><li><label><input type='radio' name='question2' value='false'><div>Se divide el valor de la comida por el porcentaje de propina.</div>
+</label></li><li><label><input type='radio' name='question2' value='true'><div>Se multiplica el valor de la comida por el porcentaje de propina.</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Se resta el porcentaje de propina del valor de la comida.</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cómo se calcula el total a pagar?</p>
+</p><ul><li><label><input type='radio' name='question3' value='true'><div>Se suma el valor de la comida, el valor del recargo por cubiertos y el valor de la propina.</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Se resta el valor del recargo por cubiertos del valor de la comida y se le suma el valor de la propina.</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Se multiplica el valor de la comida por el porcentaje de recargo y se le suma el valor de la propina.</div>
+</label></li></ul></div><div><p>Pregunta: <p>Si el valor de la comida es $50.000, el porcentaje de recargo por cubiertos es del 10% y el porcentaje de propina es del 15%, ¿cuál es el precio total a pagar?</p>
+</p><ul><li><label><input type='radio' name='question4' value='true'><div>$57.500</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>$60.000</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>$52.500</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 5'; }</script></body></html>
