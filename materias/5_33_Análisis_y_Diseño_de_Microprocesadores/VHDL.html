@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: ¿Cuál es la diferencia entre un circuito combinacional y un circuito secuencial?</p><ul><li><label><input type='radio' name='question0' value='true'>Un circuito combinacional produce una salida basada únicamente en las entradas actuales, mientras que un circuito secuencial tiene memoria y puede producir salidas basadas en entradas anteriores y su estado interno.</label></li><li><label><input type='radio' name='question0' value='false'>Ambos tipos de circuitos realizan operaciones aritméticas.</label></li><li><label><input type='radio' name='question0' value='false'>Los circuitos combinacionales son más rápidos que los circuitos secuenciales.</label></li></ul></div><div><p>Pregunta: ¿Qué opción de sintaxis es correcta para definir una señal de 8 bits en VHDL?</p><ul><li><label><input type='radio' name='question1' value='true'><div>reg [7:0] my_signal;</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>signal reg [7:0] my_signal;</div>
+</label></li><li><label><input type='radio' name='question1' value='false'>wire [8] my_signal;</label></li></ul></div><div><p>Pregunta: ¿Cuál es la función del acarreo de salida en el circuito combinacional de suma binaria?</p><ul><li><label><input type='radio' name='question2' value='true'>Llevar el bit que se lleva cuando una suma excede el rango de bits disponibles.</label></li><li><label><input type='radio' name='question2' value='false'>Indicar si la suma es positiva o negativa.</label></li><li><label><input type='radio' name='question2' value='false'>Determinar el tipo de operación de suma (por ejemplo, suma o resta).</label></li></ul></div><div><p>Pregunta: ¿Cuál de las siguientes opciones de código VHDL implementa correctamente la operación de suma binaria de dos números de 8 bits?</p><ul><li><label><input type='radio' name='question3' value='true'>sum &lt;= A + B + carry_in;</label></li><li><label><input type='radio' name='question3' value='false'>sum &lt;= A + B;</label></li><li><label><input type='radio' name='question3' value='false'>sum &lt;= A - B;</label></li></ul></div><div><p>Pregunta: ¿Por qué es importante utilizar un registro de desplazamiento en el circuito sincrónico para el contador?</p><ul><li><label><input type='radio' name='question4' value='true'>Para almacenar el estado del contador y mantener la sincronización con el reloj de entrada.</label></li><li><label><input type='radio' name='question4' value='false'>Para reducir el consumo de energía.</label></li><li><label><input type='radio' name='question4' value='false'>Para mejorar la precisión de la operación del contador.</label></li></ul></div><div><p>Pregunta: ¿Cuál de las siguientes opciones de código VHDL implementa correctamente un registro de desplazamiento para almacenar el estado del contador de 4 bits?</p><ul><li><label><input type='radio' name='question5' value='true'><div>process (clk) begin<br>
+if rising_edge(clk) then<br>
+if reset = '1' then<br>
+count &lt;= "0000";<br>
+else<br>
+count &lt;= count + 1;<br>
+end if;<br>
+end if;<br>
+end process;</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>always @(posedge clk) begin<br>
+if (reset) begin<br>
+count &lt;= 4'b0000;<br>
+end else begin<br>
+count &lt;= count + 1;<br>
+end<br>
+end</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>process (clk) begin<br>
+if reset = '1' then<br>
+count &lt;= "0000";<br>
+else<br>
+count &lt;= count + 1;<br>
+end if;<br>
+end process;</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 6'; }</script></body></html>

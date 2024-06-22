@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Cuántos bits se requieren para implementar la función?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>3</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>4</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>8</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>5</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es el primer paso para implementar la función?</p>
+</p><ul><li><label><input type='radio' name='question1' value='true'><div>Generar la tabla de verdad.</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Generar el circuito combinacional.</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Implementar directamente el decodificador 3 a 8.</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Planteamiento de solución en modelo de caja negra y gris.</div>
+</label></li></ul></div><div><p>Pregunta: <p>Una vez se tiene la tabla de verdad, ¿cuál sería la forma de implementar un decodificador 3 a 8?</p>
+</p><ul><li><label><input type='radio' name='question2' value='false'><div>Identificar las 5 señales internas, enviar 3 señales a los puertos C,B,A del decodificador 3 a 8 y las 2 señales restantes enviarlas a los puertos CB de otro decodificador 3 a 8.</div>
+</label></li><li><label><input type='radio' name='question2' value='true'><div>Identificar las 5 señales internas, enviar 3 señales a los puertos C,B,A del decodificador 3 a 8 y las 2 señales restantes dejarlas libres para posteriormente generar el circuito combinacional junto con las salidas del decodificador 3 a 8.</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Utilizar un decodificador de más de 3 entradas.</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Generar la ecuación de min-términos de la tabla de verdad de 5 bits y generar el circuito utilizando la simplificación de algebra booleana.</div>
+</label></li></ul></div><div><p>Pregunta: <p>Teniendo en cuenta que el decodificador de 3 a 8 enciende las salidas y0,y1,y2,...,y7 en el orden de los números binarios 0,1,2,...,7, ¿cuál sería la compuerta lógica que solo tomando las salidas que se deberian encender según los 3 bits LSB cumple con la tabla de verdad?</p>
+</p><ul><li><label><input type='radio' name='question3' value='false'><div>Compuerta AND.</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Compuerta NOR.</div>
+</label></li><li><label><input type='radio' name='question3' value='true'><div>Compuerta OR.</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Compuerta XOR.</div>
+</label></li></ul></div><div><p>Pregunta: <p>Para generar el circuito combinacional correctamente, ¿cuál debe ser la forma de obtener las ecuaciones de min-términos incluyendo las salidas 8 del decodificador 3 a 8 y las dos señales restantes de la entrada (2 bits MSB)?</p>
+</p><ul><li><label><input type='radio' name='question4' value='false'><div>Plantear una tabla de verdad que incluya las 8 salidas del decodificador y los 2 bits MSB de la entrada inicial, a partir de la tabla generar la ecuación de min-términos, implementar algebra booleana para simplificar y finalmente generar el circuito combinacional.</div>
+</label></li><li><label><input type='radio' name='question4' value='true'><div>Plantear una tabla de verdad que incluya solo las salidas del decodificador que se encienden y los 2 bits MSB de la entrada inicial, a partir de la tabla generar la ecuación de min-términos, implementar algebra booleana para simplificar y finalmente generar el circuito combinacional.</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Tomar solo las salidas del decodificador que se encienden y los 2 bits MSB de la entrada inicial y enviarlos a otro decodificador 3 a 8.&nbsp;</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Tomar las 8 salidas del decodificador y los 2 bits MSB de la entrada inicia y enviarlos un decodificador de 10 entradas.&nbsp;</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál sería el circuito a implementar?</p>
+</p><ul><li><label><input type='radio' name='question5' value='true'><div>El decodificador 3 a 8 con los 3 bits LSB  de la entrada inicial conectados a la entradas C,B,A, las salidas que se encienden del decodificador 3 a 8 ingresan en conjunto con los 2 bits MSB de la entra inicial al circuito combinacional (este circuito combinacional incluye una compuerta OR).</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>El decodificador 3 a 8 con los 3 bits LSB de la entrada inicial conectados a la entradas C,B,A, las salidas que se encienden del decodificador 3 a 8 ingresan en conjunto con los 2 bits MSB de la entra inicial a un decodificador más grande.</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>Las 5 entradas se envían a un circuito combinacional, el cual general la tabla de verdad inicial.</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>Los 3 bits LSB de la entrada inicial conectados a un circuito combinacional, los 2 bits MSB de la entrada inicial a un otro circuito combinacional y un tercer circuito combinacional que una los dos anteriores.</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 6'; }</script></body></html>
