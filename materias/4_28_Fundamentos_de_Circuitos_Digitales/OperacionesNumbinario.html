@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>Convertir a base binaria y realizar la operación correspondiente de los siguientes números: -357-198</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>0 1000101011<sub>2</sub></div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>1 1000101011<sub>2</sub></div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>1 1000111111<sub>2</sub></div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>1 1000000011<sub>2</sub></div>
+</label></li></ul></div><div><p>Pregunta: <p>Convertir a base binaria y realizar la operación correspondiente de los siguientes números: 287-362</p>
+</p><ul><li><label><input type='radio' name='question1' value='false'><div>1 1111011<sub>2</sub></div>
+</label></li><li><label><input type='radio' name='question1' value='true'><div>1 1001011<sub>2</sub></div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>1 1001000<sub>2</sub></div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>1 1101000<sub>2</sub></div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 2'; }</script></body></html>
