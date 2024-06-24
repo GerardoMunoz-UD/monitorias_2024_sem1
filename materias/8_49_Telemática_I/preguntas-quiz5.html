@@ -1,5 +1,89 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p style="text-align: center;"><strong>1. ¿Qué hace la capa de aplicacion?</strong></p>
-</p><ul><li><label><input type='radio' name='question0' value='undefined'>undefined</label></li><li><label><input type='radio' name='question0' value='undefined'>undefined</label></li></ul></div><div><p>Pregunta: <p style="text-align: center;"><strong>2. ¿Qué otra función tiene la capa de enlace?</strong></p>
-</p><ul><li><label><input type='radio' name='question1' value='undefined'>undefined</label></li><li><label><input type='radio' name='question1' value='undefined'>undefined</label></li></ul></div><div><p>Pregunta: <p><strong>¿Internet es una red de redes?</strong></p>
-</p><ul><li><label><input type='radio' name='question2' value='true'>Verdadero</label></li><li><label><input type='radio' name='question2' value='false'>Falso</label></li></ul></div><div><p>Pregunta: <p><strong>¿La capa de presentación traduce los datos para que los dispositivos sean capaz de comprenderlos?</strong></p>
-</p><ul><li><label><input type='radio' name='question3' value='true'>Verdadero</label></li><li><label><input type='radio' name='question3' value='false'>Falso</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 4'; }</script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Preguntas Exportadas</title>
+</head>
+<body>
+    <h1>Preguntas y Respuestas</h1>
+    <h1>Video de YouTube incrustado</h1>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-QTNJws7PRg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div>
+        <p>Pregunta:</p>
+        <p>¿Para qué se utiliza el imán?</p>
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="question0" value="false">
+                    <div>Para transportar los electrones del cátodo al ánodo</div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question0" value="true">
+                    <div>Para deformar el haz de electrones dependiendo de la polaridad</div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question0" value="false">
+                    <div>Para aumentar la iluminancia del tubo fluorescente</div>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p>Pregunta:</p>
+        <p>¿El tubo de Crookes utiliza un anodo metalico, catodo metalico y una pantalla fluorescente?</p>
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="question1" value="true">
+                    <div>Verdadero</div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question1" value="false">
+                    <div>Falso</div>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p>Pregunta:</p>
+        <p>¿Los tubos de rayos catodicos(TRC) suelen ser utilizados en la actualidad?</p>
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="question2" value="false">
+                    <div>Verdadero</div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question2" value="true">
+                    <div>Falso</div>
+                </label>
+            </li>
+        </ul>
+    </div>
+        
+    
+    <button onclick="checkAnswers()">Verificar Respuestas</button>
+    <p id="result"></p>
+    <script>
+        function checkAnswers() {
+            var correctCount = 0;
+            document.querySelectorAll('input[type="radio"]').forEach(input => {
+                if (input.checked && input.value === 'true') {
+                    correctCount++;
+                }
+            });
+            document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 3';
+        }
+    </script>
+</body>
+</html>
