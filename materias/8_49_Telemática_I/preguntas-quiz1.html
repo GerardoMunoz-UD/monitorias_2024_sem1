@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Cuál de las siguientes capas del modelo OSI se encarga de la transmisión de datos en forma de bits?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>Capa de Red</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Capa de Enlace de Datos</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>Capa Física</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál de las siguientes capas del modelo OSI se encarga de la entrega de paquetes de datos entre dispositivos en redes diferentes?</p>
+</p><ul><li><label><input type='radio' name='question1' value='false'><div>Capa de Transporte</div>
+</label></li><li><label><input type='radio' name='question1' value='true'><div>Capa de Red</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>Capa de Enlace de Datos</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué capa del modelo OSI se encarga de establecer, mantener y finalizar conexiones entre dos dispositivos?</p>
+</p><ul><li><label><input type='radio' name='question2' value='true'><div>Capa de Transporte</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Capa de Sesión</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Capa de Red</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es la capa equivalente en el modelo TCP/IP a la capa de Enlace de Datos en el modelo OSI?</p>
+</p><ul><li><label><input type='radio' name='question3' value='true'><div>Capa de Acceso a la Red</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Capa de Red</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Capa de Transporte</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es la principal función de la capa de Red en el modelo OSI?</p>
+</p><ul><li><label><input type='radio' name='question4' value='false'><div>Manejar la comunicación extremo a extremo</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Encapsular y desencapsular datos</div>
+</label></li><li><label><input type='radio' name='question4' value='true'><div>Enrutamiento de paquetes</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál de las siguientes capas del modelo TCP/IP es responsable de la detección y corrección de errores en la transmisión de datos?</p>
+</p><ul><li><label><input type='radio' name='question5' value='false'><div>Capa de Internet</div>
+</label></li><li><label><input type='radio' name='question5' value='true'><div>Capa de Transporte</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>Capa de Red</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es la capa más alta en el modelo OSI y cuál es su función principal?</p>
+</p><ul><li><label><input type='radio' name='question6' value='false'><div>Capa de Sesión - Sincronizar y gestionar sesiones de comunicación</div>
+</label></li><li><label><input type='radio' name='question6' value='false'><div>Capa de Aplicación - Proporcionar servicios de red a las aplicaciones</div>
+</label></li><li><label><input type='radio' name='question6' value='true'><div>Capa de Presentación - Traducir datos para la aplicación</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 7'; }</script></body></html>

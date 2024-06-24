@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>¿Cuál es el propósito principal de la capa de red (capa 3) en el modelo TCP/IP?</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>Establecer, mantener y finalizar conexiones entre dispositivos.</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>Enrutamiento de paquetes y gestión de direcciones IP.</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Garantizar la integridad de los datos en la transmisión.</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es el protocolo de enrutamiento más comúnmente utilizado en Internet para determinar la ruta óptima para enviar paquetes de datos?</p>
+</p><ul><li><label><input type='radio' name='question1' value='false'><div>TCP (Transmission Control Protocol)</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>UDP (User Datagram Protocol)</div>
+</label></li><li><label><input type='radio' name='question1' value='true'><div>BGP (Border Gateway Protocol)</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es la principal diferencia entre TCP (Transmission Control Protocol) y UDP (User Datagram Protocol)?</p>
+</p><ul><li><label><input type='radio' name='question2' value='true'><div>TCP proporciona una comunicación orientada a la conexión y control de flujo, mientras que UDP no garantiza la entrega ni el orden de los datos</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>UDP garantiza la entrega de datos en orden y la verificación de errores, mientras que TCP no proporciona estas garantías.</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>TCP y UDP son idénticos en términos de sus características y funcionalidades.</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué puerto utiliza el protocolo TCP para las conexiones HTTPS (HTTP seguras) por defecto?</p>
+</p><ul><li><label><input type='radio' name='question3' value='false'><div>Puerto 80</div>
+</label></li><li><label><input type='radio' name='question3' value='true'><div>Puerto 443</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Puerto 21</div>
+</label></li></ul></div><div><p>Pregunta: <p>En la capa de transporte, ¿qué función realiza el control de flujo?</p>
+</p><ul><li><label><input type='radio' name='question4' value='false'><div>Garantizar que los datos se entreguen en orden y sin pérdida.</div>
+</label></li><li><label><input type='radio' name='question4' value='true'><div>Evitar que los dispositivos reciban más datos de los que pueden manejar.</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Determinar la mejor ruta de enrutamiento para los paquetes.</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 5'; }</script></body></html>

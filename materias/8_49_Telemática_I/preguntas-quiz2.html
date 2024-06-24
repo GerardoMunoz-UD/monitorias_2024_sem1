@@ -1,0 +1,8 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>La capa de sesión del modelo OSI tiene su equivalencia en el modelo TCP/IP, en la capa:</p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>Aplicación.</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Enlace.</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Fisica</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>La capa de sesión no tiene equivalencia en el modelo TCP/IP.</div>
+
+<div>&nbsp;</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 1'; }</script></body></html>

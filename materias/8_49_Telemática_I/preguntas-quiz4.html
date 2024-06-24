@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p><strong>¿Qué es la telemática?</strong></p>
+</p><ul><li><label><input type='radio' name='question0' value='false'><div>Ciencia que aplica la teoría de grafos en la gestión de sistemas de comunicación distribuidos.</div>
+</label></li><li><label><input type='radio' name='question0' value='true'><div>Integración de las telecomunicaciones con la informática</div>
+</label></li><li><label><input type='radio' name='question0' value='false'><div>Optimización de algoritmos para la compresión de datos en redes inalámbricas.</div>
+</label></li><li><label><input type='radio' name='question0' value='false'>La síntesis de la teoría de la información y la criptografía.
+</label></li></ul></div><div><p>Pregunta: <p><strong>¿Qué protocolo se utiliza comúnmente para la transferencia de archivos en telemática?</strong></p>
+</p><ul><li><label><input type='radio' name='question1' value='false'><div>TCP/IP</div>
+</label></li><li><label><input type='radio' name='question1' value='true'><div>FTP</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>HTTP</div>
+</label></li><li><label><input type='radio' name='question1' value='false'><div>SMTP</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es la función principal de un router en una red telemática?</p>
+</p><ul><li><label><input type='radio' name='question2' value='false'><div>Filtrar virus</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Conectar cables de red</div>
+</label></li><li><label><input type='radio' name='question2' value='true'><div>Enviar paquetes de datos entre redes</div>
+</label></li><li><label><input type='radio' name='question2' value='false'><div>Administrar el enrutamiento de tráfico de red</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál es la diferencia clave entre IPv4 e IPv6 en telemática?</p>
+</p><ul><li><label><input type='radio' name='question3' value='false'><div>Velocidad de transmisión</div>
+</label></li><li><label><input type='radio' name='question3' value='true'><div>Tamaño de la direccion IP</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>Capacidad de procesamiento del router</div>
+</label></li><li><label><input type='radio' name='question3' value='false'><div>&nbsp;</div>
+
+<div>Tipo de cable utilizado</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Qué tipo de dirección se utiliza para identificar de manera única un dispositivo en una red telemática?</p>
+</p><ul><li><label><input type='radio' name='question4' value='true'><div>Dirección lógica</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Dirección física</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Dirección virtual</div>
+</label></li><li><label><input type='radio' name='question4' value='false'><div>Dirección temporal</div>
+</label></li></ul></div><div><p>Pregunta: <p>¿Cuál de las siguientes tecnologías se utiliza típicamente para establecer conexiones seguras en una red telemática?</p>
+</p><ul><li><label><input type='radio' name='question5' value='true'><div>VPN</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>SMTP</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>POP3</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>Telnet</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 6'; }</script></body></html>
