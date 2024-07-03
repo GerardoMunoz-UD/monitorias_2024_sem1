@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Preguntas Exportadas</title></head><body><h1>Preguntas y Respuestas</h1><div><p>Pregunta: <p>Si aumentas la magnitud de ambas cargas eléctricas en un factor de 3, la fuerza entre ellas aumentará en un factor de 9 según la Ley de Coulomb.</p>
+</p><ul><li><label><input type='radio' name='question0' value='true'>Verdadero</label></li><li><label><input type='radio' name='question0' value='false'>Falso</label></li></ul></div><div><p>Pregunta: <p>La Ley de Coulomb es una descripción matemática de la interacción gravitacional entre dos objetos con masa.</p>
+</p><ul><li><label><input type='radio' name='question1' value='false'>Verdadero</label></li><li><label><input type='radio' name='question1' value='true'>Falso</label></li></ul></div><div><p>Pregunta: <p>Si las dos cargas son de signo opuesto, la fuerza entre ellas será atractiva según la Ley de Coulomb.</p>
+</p><ul><li><label><input type='radio' name='question2' value='true'>Verdadero</label></li><li><label><input type='radio' name='question2' value='false'>Falso</label></li></ul></div><div><p>Pregunta: <p>La Ley de Coulomb establece que la fuerza entre dos cargas eléctricas es directamente proporcional al producto de las cargas y al cuadrado de la distancia entre ellas.</p>
+</p><ul><li><label><input type='radio' name='question3' value='true'>Verdadero</label></li><li><label><input type='radio' name='question3' value='false'>Falso</label></li></ul></div><div><p>Pregunta: <p>Si tienes dos cargas eléctricas idénticas, la fuerza entre ellas será nula según la Ley de Coulomb.</p>
+</p><ul><li><label><input type='radio' name='question4' value='false'>Verdadero</label></li><li><label><input type='radio' name='question4' value='true'>Falso</label></li></ul></div><div><p>Pregunta: <p>Dos cargas puntuales q1=2C y q2=−3C están separadas por una distancia de 0.5 m. ¿Cuál es la magnitud de la fuerza entre ellas? (Considera k=8.99×10<sup>9 </sup>Nm<sup>2</sup>/C<sup>2</sup>)</p>
+</p><ul><li><label><input type='radio' name='question5' value='false'><div>2.16×10<sup>11</sup>N</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>8.99×10<sup>9</sup>N</div>
+</label></li><li><label><input type='radio' name='question5' value='true'><div>2.16×10<sup>10</sup>N</div>
+</label></li><li><label><input type='radio' name='question5' value='false'><div>1.08×10<sup>10</sup>N</div>
+</label></li></ul></div><div><p>Pregunta: <p>Dos cargas puntuales positivas están ubicadas a una cierta distancia. ¿Qué describe correctamente la dirección de la fuerza entre las dos cargas?</p>
+</p><ul><li><label><input type='radio' name='question6' value='false'><div>Las cargas se atraen entre sí.</div>
+</label></li><li><label><input type='radio' name='question6' value='true'><div>Las cargas se repelen entre sí.</div>
+</label></li><li><label><input type='radio' name='question6' value='false'><div>No hay fuerza entre las cargas.</div>
+</label></li><li><label><input type='radio' name='question6' value='false'><div>La dirección de la fuerza depende de la magnitud de las cargas.</div>
+</label></li></ul></div><div><p>Pregunta: <p>Si la distancia entre dos cargas se reduce a la mitad, ¿cómo cambia la fuerza entre ellas según la Ley de Coulomb?</p>
+</p><ul><li><label><input type='radio' name='question7' value='false'><div>Se reduce a la mitad.</div>
+</label></li><li><label><input type='radio' name='question7' value='false'><div>Se duplica.</div>
+</label></li><li><label><input type='radio' name='question7' value='false'><div>Se reduce a una cuarta parte.</div>
+</label></li><li><label><input type='radio' name='question7' value='true'><div>Se cuadruplica.</div>
+</label></li></ul></div><button onclick='checkAnswers()'>Verificar Respuestas</button><p id='result'></p><script>function checkAnswers() { var correctCount = 0; document.querySelectorAll('input[type="radio"]').forEach(input => { if (input.checked && input.value === 'true') correctCount++; }); document.getElementById('result').textContent = 'Respuestas correctas: ' + correctCount + ' de 8'; }</script></body></html>
